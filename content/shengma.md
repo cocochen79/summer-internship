@@ -35,7 +35,7 @@
 除了廟宇本身，居民也講述一段傳奇故事：據說當初建立此廟的道士有一天突然消失，時隔不久，廟內香爐也隨之消失，如今廟內的香爐已非最初的那個。至於道士去了哪裡？香爐為何消失？答案已無從得知，只留下神秘的故事一代代流傳著。
 
 <iframe 
-    src="https://cocochen79.github.io/summer-internship/shengma_panorama.html" 
+    src="https://cocochen79.github.io/summer-internship/build/shengma_panorama.html" 
     width="100%" 
     height="700"
     style="border:none; display:block; overflow:hidden;"
