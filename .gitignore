@@ -9,4 +9,3 @@ pyvenv.cfg
 *.pyc
 __pycache__/
 lib64
-*:Zone.Identifier
