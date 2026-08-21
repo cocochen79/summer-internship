@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"name": "無祀祠點位_3",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{"type":"Feature","properties":{"ID":1,"廟宇名稱":"聖媽廟","地址":"臺北市南港區舊莊里舊莊街二段 232 巷","主祀":"聖媽","建立與擴建時間":"約二十世紀初期至二十世紀中期建立","Mapillary 街景連結":"https://www.mapillary.com/app/?pKey=2305742023593634 & https://www.mapillary.com/app/?pKey=1806538350728187  & https://www.mapillary.com/app/?pKey=3035540040118246","影像紀錄連結":"聖媽廟","經度":121.637334,"緯度":25.032098},"geometry":{"type":"Point","coordinates":[121.637334,25.032098]}},
+{"type":"Feature","properties":{"ID":2,"廟宇名稱":"德聖公廟","地址":"臺北市南港區舊莊里舊莊街二段 316 巷","主祀":"德聖公","建立與擴建時間":"日治時期便存在，大家樂時期擴建","Mapillary 街景連結":"https://www.mapillary.com/app/?pKey=2513045589176437","影像紀錄連結":"德聖公廟","經度":121.661072,"緯度":25.023508},"geometry":{"type":"Point","coordinates":[121.661072,25.023508]}},
+{"type":"Feature","properties":{"ID":3,"廟宇名稱":"百靈公廟","地址":"臺北市南港區舊莊里南深路 37 號","主祀":"百靈公","建立與擴建時間":"民國 18 年 9 月 9 日建立","Mapillary 街景連結":"https://www.mapillary.com/app/?pKey=2513045589176437","影像紀錄連結":"百靈公廟","經度":121.626856,"緯度":25.028241},"geometry":{"type":"Point","coordinates":[121.626856,25.028241]}},
+{"type":"Feature","properties":{"ID":4,"廟宇名稱":"萬善堂","地址":"臺北市南港區九如里研究院路四段","主祀":"萬善爺","建立與擴建時間":"不清楚建立時間，民國戊辰年（1988）重修","Mapillary 街景連結":"無","影像紀錄連結":"萬善堂","經度":121.601211,"緯度":25.025549},"geometry":{"type":"Point","coordinates":[121.601211,25.025549]}},
+{"type":"Feature","properties":{"ID":5,"廟宇名稱":"昭安宮萬善祠","地址":"臺北市南港區仁福里成福路 296 巷 6-7 號","主祀":"白雲仙姑","建立與擴建時間":"據說 500 年前就在此，民國 79 年時擴建","Mapillary 街景連結":"無","影像紀錄連結":"昭安宮萬善祠","經度":121.592161,"緯度":25.036778},"geometry":{"type":"Point","coordinates":[121.592161,25.036778]}}
+]
+}

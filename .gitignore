@@ -1,0 +1,12 @@
+_build/
+bin/
+include/
+lib/
+lib64/
+share/
+etc/
+pyvenv.cfg
+*.pyc
+__pycache__/
+lib64
+*:Zone.Identifier

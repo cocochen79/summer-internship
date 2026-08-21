@@ -1,0 +1,37 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+
+version: 1
+
+project:
+  id: 30d1826f-5ed5-4a25-b0dc-96785d214c83
+  title: 臺北市南港區無祀祠之紀錄
+  description: 南港區無祀祠的文字介紹與360全景照片
+  keywords:
+    - 無祀祠
+    - 南港區
+    - 宗教信仰
+    - 文化地景
+    - 地方記憶
+  github: https://github.com/cocochen79/summer-internship.git
+  static_files:
+  - content/map.html
+  - shengma_panorama.html
+  - pannellum
+  - content/photo
+
+  toc:
+    - file: content/intro.md
+    - file: content/shengma.md
+    - file: content/desheng.md
+    - file: content/bailing.md
+    - file: content/wanshantang.md
+    - file: content/zhaoangongwanshantsi.md
+    - file: content/end.md
+
+site:
+  template: book-theme
+  options:
+    folders: true
+  parts:
+    footer: |
+      © 2026 Yen-Yu Chen. Licensed under [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
