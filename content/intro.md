@@ -14,7 +14,7 @@
 
 ## 無祀祠分布位置
 <iframe
-    src="/map.html"
+    src="https://github.com/cocochen79/summer-internship/blob/main/content/map.html"
     width="100%"
     height="700"
     style="border:none;">
