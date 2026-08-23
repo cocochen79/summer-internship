@@ -32,6 +32,7 @@ site:
   template: book-theme
   options:
     folders: true
+    hide_edit_button: true
   parts:
     footer: |
       © 2026 Yen-Yu Chen. Licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
