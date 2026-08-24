@@ -33,6 +33,7 @@ site:
   template: book-theme
   options:
     folders: true
+    hide_myst_branding: true
   parts:
     primary_sidebar_header: |
       臺北市南港區無祀祠之紀錄
