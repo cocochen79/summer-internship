@@ -34,5 +34,6 @@ site:
   options:
     folders: true
   parts:
+    primary_sidebar_footer: ""
     footer: |
       © 2026 Yen-Yu Chen. Licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
