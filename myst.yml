@@ -33,7 +33,7 @@ site:
   template: book-theme
   options:
     folders: true
-    logo_text: "臺北市南港區無祀祠之紀錄"
+    logo_text: "暑期實習專題成果"
   parts:
     primary_sidebar_footer: ""
     footer: |
