@@ -9,8 +9,6 @@
 
 <iframe
     src="https://cocochen79.github.io/summer-internship/desheng_osmmap.html"
-    width="100%"
-    height="500"
     style="border: none;">
 </iframe>
 
