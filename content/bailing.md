@@ -17,12 +17,11 @@
 廟宇本體約與人同高，廟內擺放著牌位、香爐、神明燈與供品，其表面已積了些許灰塵。廟前的涼亭設有長桌，桌上有著一個寫有「金玉滿堂」字樣的香爐，用於焚燒金紙的爐子則樸素的立於涼亭一側。從現況來看，平時前來祭拜的人似乎不多，但仍有維持著基本的祭祀活動。
 
 
-<iframe 
-    src="https://cocochen79.github.io/summer-internship/build/bailing_panorama_miaokou.html" 
-    width="100%" 
+<iframe
+    src="https://cocochen79.github.io/summer-internship/build/bailing_panorama_miaokou.html"
+    width="100%"
     height="700"
-    style="border:none; display:block; overflow:hidden;"
-    scrolling="no">
+    style="border: none;">
 </iframe>
 
 -----
