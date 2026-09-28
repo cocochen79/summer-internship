@@ -6,6 +6,7 @@
 
 萬善堂位於南港區九如里研究路四段，緊鄰四分溪。廟宇主要由水泥與瓷磚構成，為較基礎、樸素的單殿式廟宇，廟頂可見一個可能為「壽」字的符號。廟內擺放線香、茶杯、香爐等祭祀用具，另有桌上型掃把，從廟宇整體的整潔程度與現場狀況來看，推測目前祭祀活動並不頻繁，但仍維持基本的祭祀行為。
 
+-----
 
 <iframe 
     src="https://cocochen79.github.io/summer-internship/build/wanshantang_panorama.html" 
