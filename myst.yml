@@ -16,6 +16,10 @@ project:
   edit_url: null
   static_files:
   - content
+  - content/photo
+  - content/desheng_osmmap.html
+  - content/deshengroute.geojson
+  - content/map.html
   - shengma_panorama.html
   - pannellum
   - desheng_panorama.html
