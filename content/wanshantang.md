@@ -9,12 +9,12 @@
 
 <iframe 
     src="https://cocochen79.github.io/summer-internship/build/wanshantang_panorama.html" 
-    width="100%" 
+    width="100%"
     height="700"
-    style="border:none; display:block; overflow:hidden;"
-    scrolling="no">
+    style="border: none;">
 </iframe>
 
+-----
 
 嵌於廟內牆上的排位寫著 **「萬善堂公祠 民國戊辰年重修」** ，其中戊辰年可對應到民國 17 年（西元 1928 年）或民國 77 年（西元 1988 年）。考量廟宇目前的建築材質與整體保存狀況，推測較可能是在民國 77 年時重修。不過，由於目前缺乏相關文獻，加上萬善堂周遭住家較少，本次田野調查期間未能找到附近居民詢問廟宇的相關事蹟，因此，此判斷與實際建廟時間有待進一步考證。
 

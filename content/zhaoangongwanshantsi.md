@@ -10,6 +10,8 @@
 
 萬善祠內供奉著白雲仙姑的神像，廟前設有天公爐，廟頂可見翹脊、鳳的造型，呈現出陽廟化的現象。此外，廟口對聯寫著 **「萬里白雲長顯赫，善居南港永馨香」** ，不僅融入廟名「萬善」和祭祀對象「白雲仙姑」，「顯赫」與「馨香」也帶有神威顯赫、香火延續的意涵，同時呈顯出廟宇與地方的關聯性。
 
+-----
+
 <iframe 
     src="https://cocochen79.github.io/summer-internship/build/zhaoangongwanshantsi_panorama_front.html" 
     width="100%" 
@@ -17,6 +19,8 @@
     style="border:none; display:block; overflow:hidden;"
     scrolling="no">
 </iframe>
+
+-----
 
 <iframe 
     src="https://cocochen79.github.io/summer-internship/build/zhaoangongwanshantsi_panorama_back.html" 
