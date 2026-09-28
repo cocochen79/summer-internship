@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>昭安宮萬善祠 360° 全景</title>
+
+    <link rel="stylesheet"
+          href="./pannellum/pannellum.css">
+
+    <script src="./pannellum/pannellum.js"></script>
+
+    <style>
+        html, body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #panorama {
+            width: 100%;
+            height: 100vh;
+        } 
+
+    </style>
+</head>
+
+<body>
+
+<div id="panorama"></div>
+
+<script>
+
+pannellum.viewer('panorama', {
+    "default": {
+        "firstScene": "scene1",
+        "autoLoad": true,
+        "author": "Yen-Yu Chen"
+    },
+
+    "scenes":{
+        "scene1": {
+            "type": "equirectangular",
+            "panorama": "./content/photo/zhaoangongwanshantsi/20260814_1406_zhaoangongwanshantsi_01_miaoding.JPG",
+            "title": "昭安宮萬善祠廟頂裝飾",
+            "pitch": 15,
+            "yaw": 12,
+            "hfov": 130,
+            "compass": true,
+            "northOffset": 300,
+            "hotSpots": [
+            ]
+        }
+    }
+});
+
+
+</script>
+
+</body>
+</html>

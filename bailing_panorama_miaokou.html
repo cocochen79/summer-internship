@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>百靈公廟 360° 全景</title>
+
+    <link rel="stylesheet"
+          href="./pannellum/pannellum.css">
+
+    <script src="./pannellum/pannellum.js"></script>
+
+    <style>
+        html, body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #panorama {
+            width: 100%;
+            height: 100vh;
+        } 
+
+    </style>
+</head>
+
+<body>
+
+<div id="panorama"></div>
+
+<script>
+
+pannellum.viewer('panorama', {
+    "default": {
+        "firstScene": "scene1",
+        "autoLoad": true,
+        "author": "Yen-Yu Chen"
+    },
+
+    "scenes":{
+        "scene1": {
+            "type": "equirectangular",
+            "panorama": "./content/photo/bailing/20260813_1031_bailing_06_appearance.JPG",
+            "title": "百靈公廟外觀",
+            "pitch": -8,
+            "yaw": 190,
+            "hfov": 120,
+            "compass": true,
+            "northOffset": 212,
+            "hotSpots": [
+                {
+                    "pitch": -2,
+                    "yaw": 10,
+                    "type": "info",
+                    "text": `
+                        <div style="text-align: center;">
+                            <img src="./content/photo/bailing/20260807_bailing_xianglu.jpg" style="width: 180px; height: auto;"/><br/>
+                            <strong>香爐</strong><br/>
+                            寫有「金玉滿堂」字樣的香爐。
+                        </div>
+                    `
+                },
+                {
+                    "pitch": -4,
+                    "yaw": 20,
+                    "type": "info",
+                    "text": `
+                        <div style="text-align: center;">
+                            <img src="./content/photo/bailing/20260807_bailing_jinlu.jpg" style="width: 180px; height: auto;"/><br/>
+                            <strong>用於燒金紙的爐子</strong><br/>
+                        </div>
+                    `
+                },
+                {
+                    "pitch": -5,
+                    "yaw": 60,
+                    "type": "info",
+                    "text": `
+                        <div style="text-align: center;">
+                            <strong>山豬窟溪</strong><br/>
+                            流向恰與百靈公廟座向相反。
+                        </div>
+                    `
+                }
+            ]
+        }
+    }
+});
+
+
+</script>
+
+</body>
+</html>

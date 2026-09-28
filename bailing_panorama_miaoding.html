@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>百靈公廟 360° 全景</title>
+
+    <link rel="stylesheet"
+          href="./pannellum/pannellum.css">
+
+    <script src="./pannellum/pannellum.js"></script>
+
+    <style>
+        html, body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #panorama {
+            width: 100%;
+            height: 100vh;
+        } 
+
+    </style>
+</head>
+
+<body>
+
+<div id="panorama"></div>
+
+<script>
+
+pannellum.viewer('panorama', {
+    "default": {
+        "firstScene": "scene1",
+        "autoLoad": true,
+        "author": "Yen-Yu Chen"
+    },
+
+    "scenes":{
+        "scene1": {
+            "type": "equirectangular",
+            "panorama": "./content/photo/bailing/20260813_0959_bailing_01_top.JPG",
+            "title": "百靈公廟廟頂裝飾",
+            "pitch": 15,
+            "yaw": 180,
+            "hfov": 120,
+            "compass": true,
+            "northOffset": 212,
+            "hotSpots": [
+            ]
+        }
+    }
+});
+
+
+</script>
+
+</body>
+</html>
