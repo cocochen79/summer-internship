@@ -11,7 +11,7 @@
     src="https://cocochen79.github.io/summer-internship/content/desheng_osmmap.html"
     width="100%"
     height="700"
-    style="border: none;">
+    frameborder="0">
 </iframe>
 
 -----
