@@ -15,14 +15,16 @@
 
 -----
 
+:::{div} col-page-right
+
 <iframe
   src="https://cocochen79.github.io/summer-internship/content/appendix/appendixphoto.html"
-  title="南港區廟宇照片圖庫"
-  width="100%"
-  height="900"
-  style="border: none;"
+  title="無祀祠影像紀錄"
+  style="display: block; width: 100%; height: 900px; border: none;"
   loading="lazy">
 </iframe>
+
+:::
 
 -----
 
