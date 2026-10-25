@@ -1,0 +1,106 @@
+
+/* ==========================================
+   1. 全站表格基本樣式
+   ========================================== */
+
+/* 表格外觀 */
+table {
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+/* 儲存格間距 */
+th,
+td {
+    padding: 10px 14px;
+    vertical-align: top;
+    text-align: left;
+}
+
+/* 表頭：不允許中文逐字換行 */
+th {
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+/* 一般儲存格：避免中文字被任意拆開 */
+td {
+    word-break: normal;
+    overflow-wrap: normal;
+}
+
+/* ==========================================
+   2. 寬表格水平捲動
+   ========================================== */
+
+/* 加上 table-scroll 類別的容器 */
+.table-scroll {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 保留表格實際所需寬度 */
+.table-scroll table {
+    width: max-content;
+    min-width: 100%;
+    table-layout: auto;
+}
+
+/* 欄位內容保持在同一行 */
+.table-scroll th,
+.table-scroll td {
+    white-space: nowrap;
+}
+
+/* ==========================================
+   3. 長文字儲存格
+   ========================================== */
+
+/* 長文字欄位設定最大寬度 */
+.table-scroll td.long-text {
+    max-width: 280px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+/* 展開／收合按鈕 */
+.cell-toggle {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 3px 8px;
+    border: 1px solid #b8c2cc;
+    border-radius: 5px;
+    background: transparent;
+    color: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+/* 滑鼠移到按鈕時 */
+.cell-toggle:hover {
+    background: rgba(128, 128, 128, 0.12);
+}
+
+/* ==========================================
+   4. 表格細節
+   ========================================== */
+
+/* 表格列分隔線 */
+.table-scroll tbody tr {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+}
+
+/* 連結可以換行，避免長網址撐開欄位 */
+.table-scroll td a {
+    overflow-wrap: anywhere;
+}
+
+/* 表格捲動區的焦點提示 */
+.table-scroll:focus-visible {
+    outline: 2px solid #4c8bf5;
+    outline-offset: 2px;
+}

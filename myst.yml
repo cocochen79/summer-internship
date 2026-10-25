@@ -47,6 +47,7 @@ site:
   options:
     folders: true
     logo_text: "暑期實習專題成果"
+    style: ./css/custom.css
   parts:
     primary_sidebar_footer: ""
     footer: |
