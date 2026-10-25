@@ -17,6 +17,9 @@ project:
   static_files:
   - content
   - content/photo
+  - content/appendix
+  - content/appendix/appendixphoto.html
+  - content/appendix/appendix_photo
   - content/desheng_osmmap.html
   - content/deshengroute.geojson
   - content/map.html
@@ -37,6 +40,7 @@ project:
     - file: content/wanshantang.md
     - file: content/zhaoangongwanshantsi.md
     - file: content/end.md
+    - file: content/appendix.md
 
 site:
   template: book-theme

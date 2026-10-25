@@ -1,0 +1,647 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>南港區無祀祠影像紀錄</title>
+
+  <style>
+    /* 基本設定 */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 16px;
+      font-family:
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        sans-serif;
+      color: #333333;
+      background: transparent;
+      line-height: 1.7;
+    }
+
+    .gallery-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* 標題 */
+    .gallery-heading {
+      margin: 0 0 6px;
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    .gallery-description {
+      margin: 0 0 22px;
+      color: #666666;
+      font-size: 0.92rem;
+    }
+
+    /* 廟宇分類按鈕 */
+    .category-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .category-button {
+      padding: 7px 15px;
+      border: 1px solid #d8d8d8;
+      border-radius: 4px;
+      background: #ffffff;
+      color: #444444;
+      font-size: 0.92rem;
+      font-family: inherit;
+      cursor: pointer;
+      transition:
+        background 0.2s,
+        color 0.2s,
+        border-color 0.2s;
+    }
+
+    .category-button:hover {
+      border-color: #777777;
+    }
+
+    .category-button.active {
+      background: #555f56;
+      color: #ffffff;
+      border-color: #555f56;
+    }
+
+    .category-button:focus-visible {
+      outline: 2px solid #555f56;
+      outline-offset: 3px;
+    }
+
+    /* 照片網格 */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px 18px;
+    }
+
+    .photo-card {
+      min-width: 0;
+    }
+
+    .photo-button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
+      border: none;
+      border-radius: 3px;
+      background: #eeeeee;
+      cursor: zoom-in;
+    }
+
+    .photo-button img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      transition: transform 0.25s;
+    }
+
+    .photo-button:hover img {
+      transform: scale(1.025);
+    }
+
+    .photo-title {
+      margin: 9px 0 2px;
+      font-size: 0.98rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .photo-description {
+      margin: 0;
+      color: #777777;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      white-space: pre-line;
+      text-align: center;
+    }
+
+    .empty-message {
+      grid-column: 1 / -1;
+      padding: 36px 12px;
+      color: #777777;
+      text-align: center;
+      border: 1px dashed #dddddd;
+    }
+
+    /* 照片放大視窗 */
+    .photo-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(0, 0, 0, 0.88);
+    }
+
+    .photo-modal.open {
+      display: flex;
+    }
+
+    .modal-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .modal-image {
+      display: block;
+      max-width: 100%;
+      max-height: 78vh;
+      object-fit: contain;
+    }
+
+    .modal-caption {
+      margin-top: 12px;
+      color: #ffffff;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 12px;
+      right: 22px;
+      padding: 4px 10px;
+      border: none;
+      background: transparent;
+      color: #ffffff;
+      font-size: 2.2rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .modal-close:focus-visible {
+      outline: 2px solid #ffffff;
+    }
+
+    /* 平板 */
+    @media (max-width: 800px) {
+      .photo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px 14px;
+      }
+    }
+
+    /* 手機 */
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+
+      .gallery-heading {
+        font-size: 1.25rem;
+      }
+
+      .category-list {
+        gap: 7px;
+      }
+
+      .category-button {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+      }
+
+      .photo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-modal {
+        padding: 12px;
+      }
+
+      .modal-image {
+        max-height: 75vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="gallery-container">
+
+    <h1 class="gallery-heading">南港區無祀祠影像紀錄</h1>
+
+<!---   <p class="gallery-description">
+      南港區五處民間信仰場所之田野調查影像紀錄。
+      點選廟宇名稱可瀏覽不同地點的照片。
+    </p> -->
+
+    <!-- 廟宇分類：不提供「全部照片」 -->
+    <nav class="category-list" aria-label="廟宇照片分類">
+
+      <button
+        class="category-button active"
+        data-category="shengma"
+        aria-pressed="true"
+        type="button">
+        聖媽廟
+      </button>
+
+      <button
+        class="category-button"
+        data-category="deshenggong"
+        aria-pressed="false"
+        type="button">
+        德聖公廟
+      </button>
+
+      <button
+        class="category-button"
+        data-category="bailinggong"
+        aria-pressed="false"
+        type="button">
+        百靈公廟
+      </button>
+
+      <button
+        class="category-button"
+        data-category="wanshantang"
+        aria-pressed="false"
+        type="button">
+        萬善堂
+      </button>
+
+      <button
+        class="category-button"
+        data-category="zhaoangong_wanshansi"
+        aria-pressed="false"
+        type="button">
+        昭安宮萬善祠
+      </button>
+
+    </nav>
+
+    <!-- 照片顯示區 -->
+    <section
+      id="photo-grid"
+      class="photo-grid"
+      aria-label="廟宇照片">
+    </section>
+
+  </main>
+
+  <!-- 照片放大視窗 -->
+  <div
+    id="photo-modal"
+    class="photo-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="照片放大檢視"
+    aria-hidden="true">
+
+    <button
+      id="modal-close"
+      class="modal-close"
+      type="button"
+      aria-label="關閉照片">
+      &times;
+    </button>
+
+    <div class="modal-content">
+      <img
+        id="modal-image"
+        class="modal-image"
+        src=""
+        alt="">
+
+      <p
+        id="modal-caption"
+        class="modal-caption">
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    /*
+     * 照片資料表
+     *
+     * category：所屬廟宇的英文代碼
+     * src：照片檔案路徑
+     * title：照片標題
+     * description：照片說明
+     *
+     * 請將範例照片路徑改成你自己的檔案路徑。
+     */
+
+    const photos = [    
+      {
+        category: "shengma",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/shengma/laoliaogudao.jpg",
+        title: "栳寮古道",
+      },
+      {
+        category: "shengma",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/shengma/far_shengma.jpg",
+        title: "遠景",
+      },
+      {
+        category: "shengma",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/shengma/near_shengma.jpg",
+        title: "近景",
+      },
+      {
+        category: "shengma",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/shengma/shengma_appearance.jpg",
+        title: "外觀",
+      },
+      {
+        category: "shengma",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/shengma/20260807_shengmaxianglu.jpg",
+        title: "香爐",
+      },
+      {
+        category: "shengma",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/shengma/introonlaoliao.jpg",
+        title: "栳寮古道上的解說牌",
+        description: "右上角出現聖媽廟的照片"
+      },
+
+      {
+        category: "deshenggong",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/desheng/20260812_deshengappearance.jpg",
+        title: "外觀",
+      },
+      {
+        category: "deshenggong",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/desheng/desheng_inside.jpg",
+        title: "內部景象",
+      },
+      {
+        category: "deshenggong",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/desheng/20260812_deshengpaiwei.jpg",
+        title: "牌位與對聯",
+      },
+      {
+        category: "deshenggong",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/desheng/desheng_side.jpeg",
+        title: "側面照片",
+      },
+      {
+        category: "deshenggong",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/desheng/desheng_indou.jpeg",
+        title: "印斗",
+      },
+      {
+        category: "deshenggong",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/desheng/desheng_jinting.jpeg",
+        title: "金亭",
+      },
+
+      {
+        category: "bailinggong",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/bailing/bailing_side.jpg",
+        title: "側面照片",
+      },
+      {
+        category: "bailinggong",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/bailing/bailing_appearance.jpg",
+        title: "廟口正面照片",
+      },
+      {
+        category: "bailinggong",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/bailing/bailing_inside.jpg",
+        title: "內部樣貌",
+      },
+      {
+        category: "bailinggong",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/bailing/bailing_back.jpg",
+        title: "背面照片",
+      },
+      {
+        category: "bailinggong",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/bailing/20260807_bailing_xianglu.jpg",
+        title: "香爐",
+        description: "一共有兩個香爐，另一個在廟內"
+      },
+      {
+        category: "bailinggong",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/bailing/20260807_bailing_jinlu.jpg",
+        title: "金爐",
+      },
+
+      {
+        category: "wanshantang",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/wanshan/wanshan_appearance.jpeg",
+        title: "外觀",
+      },
+      {
+        category: "wanshantang",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/wanshan/wanshan_side.jpeg",
+        title: "側面照片",
+      },
+      {
+        category: "wanshantang",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/wanshan/wanshan_poem.jpeg",
+        title: "牆壁上的詩句",
+        description: "詩句為：「紅塵名利色三關，賺得凡夫日夜忙，累到頭來無別事，滿腔苦訴閻王。急急忙忙苦追求，寒寒暖暖度春秋，朝朝暮暮營家計，皞皞昏昏白了頭」"
+      },
+      {
+        category: "wanshantang",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/wanshan/wanshan_jinlu.jpeg",
+        title: "金爐",
+      },
+      
+      {
+        category: "zhaoangong_wanshansi",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/zhaoanwanshansi/zhaoanwanshan_sign.jpg",
+        title: "指示牌",
+      },
+      {
+        category: "zhaoangong_wanshansi",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/zhaoanwanshansi/zhaoanwanshan_tiangonglu.jpg",
+        title: "天公爐",
+      },
+      {
+        category: "zhaoangong_wanshansi",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/zhaoanwanshansi/zhaoanwanshan_appearance.jpg",
+        title: "外觀",
+      },
+      {
+        category: "zhaoangong_wanshansi",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/zhaoanwanshansi/zhaoanwanshan_inside.jpg",
+        title: "廟內景觀",
+      },
+      {
+        category: "zhaoangong_wanshansi",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/zhaoanwanshansi/zhaoanwanshan_back.jpg",
+        title: "背面照片",
+      },
+      {
+        category: "zhaoangong_wanshansi",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/zhaoanwanshansi/zhaoanwanshan_indou.jpg",
+        title: "印斗",
+      },
+      {
+        category: "zhaoangong_wanshansi",
+        src: "https://cocochen79.github.io/summer-internship/content/appendix/appendix_photo/zhaoanwanshansi/zhaoanwanshan_dianxiang.jpg",
+        title: "點香器",
+      },
+    ];
+
+    const photoGrid = document.getElementById("photo-grid");
+    const categoryButtons = document.querySelectorAll(".category-button");
+
+    const photoModal = document.getElementById("photo-modal");
+    const modalImage = document.getElementById("modal-image");
+    const modalCaption = document.getElementById("modal-caption");
+    const modalClose = document.getElementById("modal-close");
+
+    /*
+     * 顯示指定廟宇的照片
+     */
+    function showPhotos(category) {
+      photoGrid.replaceChildren();
+
+      const filteredPhotos = photos.filter(
+        photo => photo.category === category
+      );
+
+      // 更新目前選取的分類按鈕
+      categoryButtons.forEach(button => {
+        const isActive = button.dataset.category === category;
+
+        button.classList.toggle("active", isActive);
+        button.setAttribute("aria-pressed", String(isActive));
+      });
+
+      // 如果該分類沒有照片
+      if (filteredPhotos.length === 0) {
+        const message = document.createElement("p");
+        message.className = "empty-message";
+        message.textContent = "此分類目前尚無照片。";
+        photoGrid.appendChild(message);
+        return;
+      }
+
+      // 建立照片卡片
+      filteredPhotos.forEach(photo => {
+        const card = document.createElement("article");
+        card.className = "photo-card";
+
+        const imageButton = document.createElement("button");
+        imageButton.className = "photo-button";
+        imageButton.type = "button";
+        imageButton.setAttribute(
+          "aria-label",
+          `放大檢視：${photo.title}`
+        );
+
+        const image = document.createElement("img");
+        image.src = photo.src;
+        image.alt = photo.title;
+        image.loading = "lazy";
+
+        // 圖片載入失敗時顯示提示
+        image.addEventListener("error", () => {
+          image.alt = `無法載入照片：${photo.title}`;
+          imageButton.style.cursor = "default";
+        });
+
+        imageButton.appendChild(image);
+
+        // 點擊照片，開啟放大視窗
+        imageButton.addEventListener("click", () => {
+          if (!image.complete || image.naturalWidth === 0) {
+            return;
+          }
+
+          openModal(photo);
+        });
+
+        const title = document.createElement("h2");
+        title.className = "photo-title";
+        title.textContent = photo.title;
+
+        const description = document.createElement("p");
+        description.className = "photo-description";
+        description.textContent = photo.description || "";
+
+        card.appendChild(imageButton);
+        card.appendChild(title);
+        card.appendChild(description);
+
+        photoGrid.appendChild(card);
+      });
+    }
+
+    /*
+     * 開啟照片放大視窗
+     */
+    function openModal(photo) {
+      modalImage.src = photo.src;
+      modalImage.alt = photo.title;
+      modalCaption.textContent = photo.description
+        ? `${photo.title}｜${photo.description}`
+        : photo.title;
+
+      photoModal.classList.add("open");
+      photoModal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+
+      modalClose.focus();
+    }
+
+    /*
+     * 關閉照片放大視窗
+     */
+    function closeModal() {
+      photoModal.classList.remove("open");
+      photoModal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+
+      modalImage.src = "";
+    }
+
+    // 點擊廟宇分類按鈕
+    categoryButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        showPhotos(button.dataset.category);
+      });
+    });
+
+    // 點擊 X 關閉
+    modalClose.addEventListener("click", closeModal);
+
+    // 點擊照片以外的黑色區域關閉
+    photoModal.addEventListener("click", event => {
+      if (event.target === photoModal) {
+        closeModal();
+      }
+    });
+
+    // 按下 Escape 鍵關閉
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && photoModal.classList.contains("open")) {
+        closeModal();
+      }
+    });
+
+    // 網頁開啟時，預設只顯示「聖媽廟」
+    showPhotos("shengma");
+  </script>
+</body>
+</html>
