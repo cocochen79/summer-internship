@@ -7,32 +7,19 @@
 #### 前言
 過去同屬大坑莊、距離腦寮聚落不遠的**畚箕湖聚落**也有著一間有應公廟，根據 OpenStreetMap 的紀錄，該廟位於余氏古厝旁的步道上。然而，網路上幾乎沒有這間廟宇的相關介紹與影像紀錄，加上廟宇位處山區，周遭人煙較為稀少，也常出現午後雷陣雨，因此我懷揣著些許不安與好奇的心情，前往探尋他的真面目。
 
-<iframe
-    src="https://cocochen79.github.io/summer-internship/content/desheng_osmmap.html"
-    width="100%"
-    height="700"
-    frameborder="0">
-</iframe>
-
 -----
 
-::::{grid} 2
+#### 實地踏查：走入余氏古厝步道
 
-:::{div} 
 <iframe
     src="https://www.mapillary.com/embed?map_style=Esri%20satellite&image_key=2513045589176437&x=0.5&y=0.5&style=photo"
     style="float: right; width: 45%; height: 360px; margin: 0 0 16px 20px; border: none;"
     title="德聖公廟 Mapillary 街景">
 </iframe>
-:::
 
-:::{div} 
-#### 實地踏查：走入余氏古厝步道
+
+
 回到栳寮古道登山口，順著舊莊街二段繼續往山區前行，見到余氏古厝的指引牌後，右轉進入舊莊街二段 316 巷。相較於聖媽廟，德聖公廟的位置又更加隱蔽了些，幸得居於余氏古厝的余軟爺爺指引，才順利找到登山入口。登山入口夾藏於石砌房與紅磚屋之間，沿著石板階梯行走約 200 公尺，再順著右側木棧階梯[^1]上行不久後，便可見一座華麗卻也斑駁的廟宇出現在眼前。
-:::
-
-::::
-
 
 ::::{grid} 2
 
