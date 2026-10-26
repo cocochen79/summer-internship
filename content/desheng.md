@@ -11,12 +11,13 @@
 
 #### 實地踏查：走入余氏古厝步道
 
+<div style="margin-bottom: 24px;">
 <iframe
     src="https://www.mapillary.com/embed?map_style=Esri%20satellite&image_key=2513045589176437&x=0.5&y=0.5&style=photo"
     style="float: right; width: 45%; height: 360px; margin: 0 0 16px 20px; border: none;"
     title="德聖公廟 Mapillary 街景">
 </iframe>
-
+<div>
 
 
 回到栳寮古道登山口，順著舊莊街二段繼續往山區前行，見到余氏古厝的指引牌後，右轉進入舊莊街二段 316 巷。相較於聖媽廟，德聖公廟的位置又更加隱蔽了些，幸得居於余氏古厝的余軟爺爺指引，才順利找到登山入口。登山入口夾藏於石砌房與紅磚屋之間，沿著石板階梯行走約 200 公尺，再順著右側木棧階梯[^1]上行不久後，便可見一座華麗卻也斑駁的廟宇出現在眼前。

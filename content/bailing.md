@@ -10,12 +10,13 @@
 -----
 
 #### 實地踏查結果
+<div style="margin-bottom: 24px;">
 <iframe
     src="https://www.mapillary.com/embed?map_style=Esri%20satellite&image_key=1187181414486629&x=0.5&y=0.5&style=photo"
     style="float: right; width: 45%; height: 360px; margin: 0 0 16px 20px; border: none;"
     title="德聖公廟 Mapillary 街景">
 </iframe>
-
+<div>
 
 
 百靈公廟位於山水綠生態公園內，其前身為山豬窟垃圾衛生掩埋場。過去園區內也曾有住宅，但因地基不穩而拆除。而後，經過土地整治與環境復育，逐漸成為保護生態、提供民眾休憩的場所。相較於聖媽廟與德聖宮廟，前往百靈公廟的路途平易近人許多。進入山水綠生態公園後，沿著柏油路前行，途經福聖宮與遊客中心，再越過一座小橋後便可抵達百靈公廟[^1]。
