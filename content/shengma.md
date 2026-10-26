@@ -27,11 +27,10 @@
 
 #### 實地踏查：走進栳寮古道
 
-<iframe 
-    width="640" 
-    height="480" 
-    src="https://www.mapillary.com/embed?map_style=Esri%20satellite&image_key=2305742023593634&x=0.5&y=0.5&style=photo" 
-    frameborder="0">
+<iframe
+    src="https://www.mapillary.com/embed?map_style=Esri%20satellite&image_key=2305742023593634&x=0.5&y=0.5&style=photo"
+    style="float: right; width: 45%; height: 360px; margin: 0 0 16px 20px; border: none;"
+    title="聖媽廟 Mapillary 街景">
 </iframe>
 
 栳寮古道登山口位在環茶山莊與南港明孝天后宮之間，彎進去之後沿著左前方的石階上行約 200 公尺會遇到一個岔路，左側可前往錦興煤礦通風口，右側則通往石板廟與魏靜時故居。再上行約 85 公尺，左手邊有一個鄭氏墓園，石板小廟便靜靜地坐落在墓園對面。
