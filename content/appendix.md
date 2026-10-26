@@ -7,7 +7,7 @@
 
 <iframe
   src="https://cocochen79.github.io/summer-internship/content/appendix/appendix_sheet.html"
-  style="width: 100%; height: 700px; border: none;"
+  style="width: 100%; height: 500px; border: none;"
   title="南港區無祀祠紀錄表">
 </iframe>
 :::
