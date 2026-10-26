@@ -20,6 +20,7 @@ project:
   - content/appendix
   - content/appendix/appendixphoto.html
   - content/appendix/appendix_photo
+  - content/appendix/appendix_sheet.html
   - content/desheng_osmmap.html
   - content/deshengroute.geojson
   - content/map.html
