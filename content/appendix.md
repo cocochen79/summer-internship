@@ -1,7 +1,8 @@
-# 附錄
-
 :::{div}
 :class: col-page-right
+
+# 附錄
+:::
 
 -----
 
@@ -15,6 +16,9 @@
 
 -----
 
+:::{div}
+:class: col-page-right
+
 <iframe
   src="https://cocochen79.github.io/summer-internship/content/appendix/appendixphoto.html"
   title="無祀祠影像紀錄"
@@ -22,9 +26,8 @@
   loading="lazy">
 </iframe>
 
+:::
+
 -----
 
 [^1]: 表格顯示 X 的欄位代表無相關資訊
-
-
-:::

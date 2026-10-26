@@ -18,8 +18,12 @@
 
 ::::{grid} 2
 
-:::{image} ./photo/desheng/20260807_deshengentrance.jpg
-:alt: 德聖公廟登山入口照片
+:::{div} 
+<iframe
+    src="https://www.mapillary.com/embed?map_style=Esri%20satellite&image_key=2513045589176437&x=0.5&y=0.5&style=photo"
+    style="float: right; width: 45%; height: 360px; margin: 0 0 16px 20px; border: none;"
+    title="德聖公廟 Mapillary 街景">
+</iframe>
 :::
 
 :::{div} 
