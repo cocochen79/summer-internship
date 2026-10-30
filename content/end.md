@@ -10,11 +10,7 @@
 
 -----
 
-本網站所使用之影像檔案皆存放 [depositar 研究資料寄存所](https://data.depositar.io/organization/nangang-youyinggongtemple-record)。
-
-如果您對於網站有任何疑問，歡迎到 [github](https://github.com/cocochen79/summer-internship/issues) 留言討論，若是網站內容需要修正或可以補充更多資訊，也請您不吝與我分享。
-
-感謝您的閱讀！
+本網站所使用之影像檔案皆存放 [depositar 研究資料寄存所](https://data.depositar.io/organization/nangang-youyinggongtemple-record)。如果您對於網站有任何疑問，歡迎到 [github](https://github.com/cocochen79/summer-internship/issues) 留言討論，若是網站內容需要修正或可以補充更多資訊，也請您不吝與我分享，感謝您的閱讀！
 
 -----
 
